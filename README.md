@@ -28,8 +28,8 @@ _TBD_ - use mutewinter with customization.  Requires vim 7.4 or higher.  The You
 ```
 brew install vim cmake
 git clone http://github.com/mutewinter/dot_vim.git ~/.vim
-~/.vim/bundle/YouCompleteMe/install.sh
 ~/.vim/scripts/setup
+~/.vim/bundle/YouCompleteMe/install.sh
 ```
 
 
