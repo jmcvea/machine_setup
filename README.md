@@ -10,14 +10,21 @@ cd ~
 mkdir Code
 ```
 ## Brew setup
-* install brew.  See (http://brew.sh).  `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-* `brew tap caskroom/cask homebrew/completions homebrew/versions pivotal/tap`
-* `brew install ant bash-completion brew-cask cloudfoundry-cli cmake docker-completion git jq nave rbenv readline the_silver_searcher tig tmux tree vim wget` 
+```script
+# install brew.  See (http://brew.sh).
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
+brew tap homebrew/completions
+brew tap homebrew/versions
+brew tap pivotal/tap
+brew install ant bash-completion brew-cask cloudfoundry-cli cmake docker-completion git jq nave rbenv readline the_silver_searcher tig tmux tree vim wget
+brew cask install iterm dockertoolbox
+```
 
 ## Coding
 ### Fonts
 Install the Powerline fonts
-```
+```script
 cd ~/Code
 git clone https://github.com/powerline/fonts.git
 ~/Code/fonts/install.sh
@@ -25,10 +32,11 @@ git clone https://github.com/powerline/fonts.git
 
 ### VIM
 _TBD_ - use mutewinter with customization.  Requires vim 7.4 or higher.  The YouCompleteMe plugin requires cmake.  Install vim and cmake from brew to get the latest.
-```
+```script
 brew install vim cmake
 git clone http://github.com/mutewinter/dot_vim.git ~/.vim
-~/.vim/scripts/setup
+cd ~/.vim
+scripts/setup
 ~/.vim/bundle/YouCompleteMe/install.sh
 ```
 
